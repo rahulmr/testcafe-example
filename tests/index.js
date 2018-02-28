@@ -4,7 +4,7 @@ fixture('Getting Started')
   .page('https://github.com');
 
 test('Find "testcafe-example" repo on GitHub', async (t) => {
-  const repo = Selector('.repo-list > li > div');
+  const repo = Selector('.repo-list > .repo-list-item > div');
   // search github
   await t
     .typeText('form[action="/search"]', 'testcafe-example user:mjhea0')
